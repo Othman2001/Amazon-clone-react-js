@@ -1,0 +1,22 @@
+.check{
+    display: grid;
+    background-color: #fff;
+
+}
+
+.checkout_product{
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+.check__info{
+    display: flex;
+    flex-direction: column;
+}
+.product_button{
+
+    background-color: #f0d14b;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+}

@@ -1,0 +1,33 @@
+.slider{
+    display: grid;
+    position: relative;
+}
+.slider_button_next{
+    position: absolute;
+    top: 40%;
+   left: 90%;
+    transform: translate(-50%, -50%);
+}
+.slider_button_perv{
+position: absolute;
+top: 31%;
+right: 90;
+}
+.slider_button_perv:hover{
+    cursor: pointer;
+}
+.slider_button_next:hover{
+    cursor: pointer;
+} 
+.icon{
+ font-size: 90px !important;
+}
+.slider_buttons{
+    display: grid
+}
+.slider_image img{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: inline;
+  }
