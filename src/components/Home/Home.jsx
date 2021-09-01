@@ -1,10 +1,31 @@
-import React from 'react'
-import Header from '../header/Header'
+/* eslint-disable no-undef */
+import React ,{useEffect,useState} from 'react'
 import Product from '../products/Product'
  import Slider from '../slider/slider'
 import './home.css'
 
 function Home() {
+  const [productData, setProductData] = useState();
+  useEffect(()=>{
+
+    const fetchData = async()=>{
+    try{
+      const result = await fetch('https://fakestoreapi.com/products');
+      const body = await result.json();
+      setProductData(body)
+    }catch(err){
+      console.log("error");
+    }
+    console.log(productData , "Data")
+
+    }
+    fetchData()
+    console.log(productData , "Data")
+
+    
+},[])
+console.log(productData , "Data")
+
     return (
         <div className = "home">
           <div className = "home_slider">
@@ -16,33 +37,15 @@ function Home() {
             src = "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_v2_1x._CB432458380_.jpg" />
           </div>
           <div className="home_products">
-
+{
+  productData?.map((product)=>{
+    return(
+      <Product id = {product.id} title= {product.title} rating = {5}image = {product.image}  price = {product.price}/>
+    )
+  })
+}
      
  
-      <Product id = "213213321"
-                 title = "HP 63 | Ink Cartridge | Black | F6U62AN"
-                 price = {11,96}
-                 rating ={5}
-                 image = "https://images-na.ssl-images-amazon.com/images/I/41Q-WavqjiL._AC_US160_.jpg"
-               />     
-           <Product id = "213213321"
-                 title = "Roku Premiere | HD/4K/HDR Streaming Media Player, Simple Remote and Premium HDMI Cable"
-                 price = {39}
-                 rating ={5}
-                 image = "https://images-na.ssl-images-amazon.com/images/I/41LREmVhIGL._AC_US160_.jpg"
-               />     
-               <Product id = "213213321"
-                 title = "TP-Link AC1750 Smart WiFi Router -  , Parental Control&QoS (Archer A7)"
-                 price = {62}
-                 rating ={2}
-                 image = "https://images-na.ssl-images-amazon.com/images/I/415vAIn9uEL._AC_US160_.jpg"
-               />     
-                <Product id = "213213321"
-                 title = "AMD Ryzen 7 3700X 8-Core, 16-Thread Unlocked Desktop Processor with Wraith Prism LED Cooler"
-                 price = {294}
-                 rating ={3}
-                 image = "https://images-na.ssl-images-amazon.com/images/I/51wpN1SESrL._AC_US160_.jpg"
-               />     
        </div>
       </div>
      

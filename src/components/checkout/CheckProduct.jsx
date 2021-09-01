@@ -1,7 +1,6 @@
 import React from 'react'
 import "./check.css"
 import {useStateValue}  from '../../state/stateProvider'
-import SubTotal from '../subTotal/SubTotal'
 function CheckProduct({ id, title, image,price,rating}) {
     const [{ basket },dispatch] = useStateValue()  
    const removeBasket = ()=>{

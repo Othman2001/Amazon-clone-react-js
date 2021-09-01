@@ -3,7 +3,6 @@ import { useStateValue } from '../../state/stateProvider'
 import  CheckProduct from '../checkout/CheckProduct'
 import './check.css'
 import SubTotal from '../subTotal/SubTotal'
-import CurrencyFormat from 'react-currency-format'
 function CheckOut() {
     const[{basket}] = useStateValue()
     return (
