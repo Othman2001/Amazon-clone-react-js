@@ -29,8 +29,6 @@
 }
 
 .product>img {
-    max-height: 200px !important;
-    width: 100% !important;
     object-fit: contain !;
     margin-bottom: 15px;
 }
@@ -48,11 +46,47 @@
 }
 
 .product__image {
-    max-width: 300px;
+    width: 300px;
+    height: 300px;
 }
 
 .product_text {
-    padding-top: 150px;
     line-height: 51px;
     padding-bottom: 25px;
+}
+
+.products-data {
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    /* max-height: 509px; */
+    padding-top: 6px;
+    margin-left: 61px;
+}
+
+.product-price-page {
+    color: #b12755;
+    font-size: 18px !important;
+}
+
+.product-location {
+    font-size: 12px;
+}
+
+.stock {
+    color: #b12755;
+    font-size: 18px !important;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.products-page {
+    padding-top: 130px;
+}
+
+.text {
+    font-size: 14px;
+}
+
+.line {
+    line-height: 100px;
 }

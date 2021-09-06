@@ -1,6 +1,5 @@
 .App {
     text-align: center;
-    background-color: whitesmoke;
     font-family: "Amazon Ember", Arial, sans-serif;
     color: black !important;
 }
@@ -9,6 +8,8 @@
     color: #333 !important;
     background-color: #ffd814 !important;
     transition: 0.5s ease-in-out !important;
+    padding: 7px 65px !important;
+    border-radius: 31px !important;
 }
 
 .amazon_button:hover {

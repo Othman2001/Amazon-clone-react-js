@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
 import React ,{useEffect,useState} from 'react'
 import Product from '../products/Product'
- import Slider from '../slider/slider'
+ import Slider from '../slider/slider';
+ import Footer from '../Footer/Footer';
 import './home.css'
 
 function Home() {
@@ -27,6 +28,7 @@ function Home() {
 console.log(productData , "Data")
 
     return (
+      <div>
         <div className = "home">
           <div className = "home_slider">
           <Slider />
@@ -40,6 +42,7 @@ console.log(productData , "Data")
 {
   productData?.map((product)=>{
     return(
+      
       <Product id = {product.id} title= {product.title} rating = {5}image = {product.image}  price = {product.price}/>
     )
   })
@@ -48,6 +51,9 @@ console.log(productData , "Data")
  
        </div>
       </div>
+      <Footer />
+      </div>
+
      
   
     )

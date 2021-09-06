@@ -42,9 +42,7 @@ Array(rating).fill().map((i)=>(<span>🌟 </span>))
 }
 </div>
 </div>
-<button className = "product_button"
-        onClick = {addToBasket}
->Add To Basket </button>
+
 
 
 

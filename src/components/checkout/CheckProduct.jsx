@@ -1,6 +1,7 @@
 import React from 'react'
 import "./check.css"
 import {useStateValue}  from '../../state/stateProvider'
+import SubTotal from '../subTotal/SubTotal';
 function CheckProduct({ id, title, image,price,rating}) {
     const [{ basket },dispatch] = useStateValue()  
    const removeBasket = ()=>{
@@ -11,12 +12,13 @@ function CheckProduct({ id, title, image,price,rating}) {
        })
    }
     return (
-        <div className = "checkout_product">
+        <div className = "checkout_product row">
 
-            <div className = "check_image">
-            <img src = {image} alt ="product" />
+            <div className = "check_image col-lg-6 ">
+            <img src = {image} alt ="product" class = "product__image" />
             </div>
-            <div className = "check__info">
+         
+            <div className = "check__info col-lg-6 ">
                 <p className = "info__title"> {title} </p>
                 <p className = "info__price">
                     <small>$</small>
@@ -32,6 +34,9 @@ Array(rating).fill().map((i)=>(<span>🌟 </span>))
                 </div>
             </div>
             
+            
+    
+  
         
 
         </div>

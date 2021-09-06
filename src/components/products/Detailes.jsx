@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import { useStateValue } from '../../state/stateProvider'
+import Footer from '../Footer/Footer';
 import Header from '../header/Header';
 import "./product.css";
 function Detailes() {
@@ -38,31 +39,54 @@ console.log(product,"product");
         <div>
             <Header />
             <div class = "container" >
-              <div class = "row" >
-              <div class = "col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div class = "row products-page" >
+              <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12">
                   <img src = {product?.image} alt = {product?.title} class = "img-fluid"  />
               </div>
-              <div class = "col-lg-6 col-md-12 col-sm-12 col-xs-12" >
+              <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12" >
                   <div class = "row" >
+                      <h3 class = "product-title pt-5" >
+                        {product?.title}
+                      </h3>
                       <p class  = "product_text "> 
+
                       {product?.description}
 
                       </p>
                       
                   </div>
-                  <div class = "row" >
-                  <div class = "products-data">
-                  <button type ="button" class = "btn btn-primary amazon_button" onClick = {addToBasket}> Add To cart </button>
+         
+              </div>
+
+              <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class = "products-data">
+                <h4 class = "product-price-page"> {product?.price}  </h4>
+                <p class = "text">
+                + $394.41 Shipping & Import Fees Deposit to Egypt Details 
+                </p>
+
+
+                <a href = "# " class = "product-location"> Deliver To Egypt </a>
+                <h4 class = "stock">
+                only 11 avalibale in stock
+                </h4>
+                  <button type ="button" class = "amazon_button" onClick = {addToBasket}> Add To cart </button>
+
+                  <p class = "text">
+                  Secure transaction
+Sold by Happy Ranger and Fulfilled by Amazon.
+Return policy: Refund or replacement available 
+Support: Free Amazon tech support included 
+Add a gift receipt for easy returns
+                  </p>
+
                   </div>
-    
-                  </div>
-                
               </div>
               </div>
        
             
           </div>
-         
+         <Footer/>
 
         </div>
     )

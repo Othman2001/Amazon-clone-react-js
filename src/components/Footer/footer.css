@@ -1,0 +1,16 @@
+.footer {
+    text-align: center;
+    background-color: #232f3e;
+}
+
+footer h3 {
+    font-size: 12pt !important;
+    font-weight: 700 !important;
+    color: #fff;
+}
+
+footer h4 {
+    font-size: 10pt !important;
+    font-weight: 100;
+    color: #fff;
+}
